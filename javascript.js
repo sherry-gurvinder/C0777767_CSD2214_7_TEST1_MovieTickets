@@ -1,5 +1,5 @@
 $( document ).ready(function() {
-
+   $('.movieseat').off("click");
 
 var movieseat=0;
 var moviename;
@@ -34,9 +34,11 @@ $("#movie").change(function()
  $(".movieseat").click(function()
  {
    document.getElementById("totalprice").innerHTML="";
+   document.getElementById("seats").innerHTML="";
    $( this ).toggleClass("selected");
    movieseat++;
    document.getElementById("totalprice").innerHTML=movieseat*price;
+   document.getElementById("seats").innerHTML=movieseat;
    
   
 
