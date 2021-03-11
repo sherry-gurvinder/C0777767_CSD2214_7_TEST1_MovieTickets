@@ -16,9 +16,10 @@
 
   <span style="font-size: 24px;">Select Movie from the drop down</span>
     <select name="movie" id="movie">
-        <option>John Wick</option>
-        <option>Gone Girl</option>
-        <option>Arrival</option>
+        <option></option>
+        <option>John Wick ($13.00)</option>
+        <option>Gone Girl ($15.00)</option>
+        <option>Arrival ($10.00)</option>
     </select>
 <table class="movietable">
     <tr class="movierow">
@@ -54,9 +55,18 @@
         <td class="movieseat na"></td>
         <td class="movieseat na"></td>
     </tr>
+    <tr>
+        <td colspan="9" style="text-align: left;">
+            <p>Movie Selected:</p>
+            <p>Ticket Price:$<span id="price">0.00</span></p>
+            <p>Number of seats selected:<span id="seats">0</span></p>
+            <p>Total Price:$<span id="totalprice">0.00</span></p>
+        </td>
+    </tr>
 </table>
 </form>
-         
+  
+
 </body>
 
 
