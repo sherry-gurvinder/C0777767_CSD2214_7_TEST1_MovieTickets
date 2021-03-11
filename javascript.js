@@ -1,3 +1,14 @@
 $( document ).ready(function() {
-   alert("Movie Ticket Booking");
+
+
+
+ $(".movieseat").click(function()
+ {
+   
+   $( this ).toggleClass("selected");
+
+   
+ })
+
+
 });

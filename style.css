@@ -1,3 +1,25 @@
 html,body{
     margin: 0 auto;
 }
+.movietable
+{
+    width: 70%;
+    margin-left: 15%;
+}
+.movietable td{
+    width: 1%;
+    border: 1px solid black;
+    height: 10px;
+}
+.na
+{
+    background-color: grey;
+}
+.selected
+{
+    background-color: green;
+}
+.occupied
+{
+
+}
