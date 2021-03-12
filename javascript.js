@@ -1,6 +1,6 @@
 $( document ).ready(function() {
   
-   $("table").prop("disabled", true);
+   $('td').addClass('inactiveclick');
 
 var movieseat=0;
 var moviename;
@@ -8,7 +8,7 @@ var price=0;
 
 $("#movie").change(function()
 {
-  
+   $('td').addClass('activeclick');
    moviename = $("#movie").val();
    if(moviename == "John Wick ($13.00)")
    {
@@ -66,7 +66,7 @@ $("#movie").change(function()
       if (result == true)
       {
          $("td").each(function() {
-            $( this ).attr('disabled','disabled');
+           
             if($( this).hasClass( "selected" ))
                {
                   $( this ).addClass("occupied");
@@ -75,14 +75,17 @@ $("#movie").change(function()
             // compare id to what you want
             flag = 1;
       });
-         
+         $('td').removeClass('activeclick');
+         $('td').addClass('inactiveclick');
          $("#finalpayment").removeAttr("disabled"); 
+        
+
        
       } 
       
       else
       {
-         
+         $('td').addClass('activeclick');
       }
       return false;
    }
