@@ -16,7 +16,7 @@
     $( document ).ready(function() {
     
        document.getElementById("payment").innerHTML=price;
-
+        document.getElementById("moviename").innerHTML=urlParams.get('movie');
        
        $("#Pay").click(function()
        {
@@ -65,6 +65,7 @@
   
    
         <h1>Confirm Purchase</h1>
+        <h2 id="moviename"></h2>
       
         <p>Total Amount to Pay:$<span id="payment"></span></p>
         <span id="Error-msg" style="color: #ff000094;"></span>
