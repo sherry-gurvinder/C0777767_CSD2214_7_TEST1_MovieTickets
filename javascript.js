@@ -37,13 +37,18 @@ $("#movie").change(function()
    document.getElementById("seats").innerHTML="";
    $( this ).toggleClass("selected");
    movieseat++;
-   
    document.getElementById("seats").innerHTML=movieseat;
    
    $("#finalpayment").val(movieseat*price);
    
   
 
+ })
+
+ $("#buyseat").click(function() {
+
+   $("#finalpayment").removeAttr("disabled"); 
+    
  })
 
 
