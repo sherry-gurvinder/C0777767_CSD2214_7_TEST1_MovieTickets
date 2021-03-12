@@ -59,6 +59,12 @@
 
 
 </script>
+<style>
+    body
+    {
+        text-align: center;
+    }
+</style>
 </head>
 
 <body>
@@ -69,8 +75,8 @@
       
         <p style="font-size: 22px;">Total Amount to Pay:$<span id="payment"></span></p>
         <span id="Error-msg" style="color: #ff000094;"></span>
-        <form>
-        <table>
+        <form style="margin-left: 40%;">
+        <table style="    text-align: left;">
             <tr>
                 <td>
 
@@ -139,9 +145,18 @@
                     
                 </td>
             </tr>
+            <tr>
+                <td>
+                    <input type="submit" value="Pay Now" id="Pay" style="background-color:#ef8200;
+                    border: 0px solid;
+                    color: white;
+                    padding: 15px;
+                    font-size: 20px;"> 
+                </td>
+            </tr>
             
         </table>
-        <input type="submit" value="Pay Now" id="Pay"> 
+      
     </form>
 </body>
 </html>
