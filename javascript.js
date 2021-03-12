@@ -53,29 +53,42 @@ $("#movie").change(function()
   
 
  })
-
+ var flag=0;
  $("#buyseat").click(function() {
-
+   debugger;
    var result;
-   var result = confirm("Press 'ok' to confirm");
-   if (result == true)
-   {
-      $("td").each(function() {
-         if($( this).hasClass( "selected" ))
-            {
-               $( this ).addClass("occupied");
-            }
-     
-         // compare id to what you want
-     });
-      
-      $("#finalpayment").removeAttr("disabled"); 
-   } 
    
+   if(flag==0)
+   {
+
+      var result = confirm("Press 'ok' to confirm");
+      if (result == true)
+      {
+         $("td").each(function() {
+            $( this ).attr('disabled','disabled');
+            if($( this).hasClass( "selected" ))
+               {
+                  $( this ).addClass("occupied");
+               }
+      
+            // compare id to what you want
+            flag = 1;
+      });
+         
+         $("#finalpayment").removeAttr("disabled"); 
+       
+      } 
+      
+      else
+      {
+         
+      }
+      return false;
+   }
    else
    {
-  
-      
+      $("#finalpayment").removeAttr("disabled"); 
+      flag = 1;
    }
 
    
