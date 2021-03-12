@@ -8,7 +8,6 @@ html,body{
 }
 .movietable td{
     width: 1%;
-    
     height: 45px;
 }
 .na
@@ -31,4 +30,20 @@ html,body{
 .occupied
 {
     background-color: brown;
+}
+#buyseat
+{
+    background-color:#ef8200;
+    border: 0px solid;
+    color: white;
+    padding: 15px;
+    font-size: 20px;
+}
+#buyseat:hover
+{
+    background-color:#005a8c;
+    border: 0px solid;
+    color: #ef8200;
+    padding: 15px;
+    font-size: 20px;
 }
