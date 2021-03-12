@@ -35,8 +35,17 @@ $("#movie").change(function()
  {
    document.getElementById("finalpayment").innerHTML="";
    document.getElementById("seats").innerHTML="";
-   $( this ).toggleClass("selected");
-   movieseat++;
+   if($( this).hasClass( "selected" ))
+   {
+      movieseat--;
+      $( this ).toggleClass("selected");
+   }
+   else
+   {
+      $( this ).toggleClass("selected");
+      movieseat++;
+   }
+ 
    document.getElementById("seats").innerHTML=movieseat;
    
    $("#finalpayment").val(movieseat*price);
@@ -48,6 +57,8 @@ $("#movie").change(function()
  $("#buyseat").click(function() {
 
    $("#finalpayment").removeAttr("disabled"); 
+
+   
     
  })
 
