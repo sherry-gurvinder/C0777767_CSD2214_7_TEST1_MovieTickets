@@ -1,7 +1,7 @@
 $( document ).ready(function() {
   
-   alert("select movie from drop down")
-   $('td').addClass('inactiveclick');
+   
+   //$('td').addClass('inactiveclick');
 
 var movieseat=0;
 var moviename;
