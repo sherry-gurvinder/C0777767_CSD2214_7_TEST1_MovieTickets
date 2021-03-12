@@ -4,19 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Payment detail</title>
-<script>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script>
+       
     const queryString = window.location.search;
     console.log(queryString);
     const urlParams = new URLSearchParams(queryString);
     const final_payment = urlParams.get('finalpayment')
     console.log(final_payment);
+    var price = final_payment;
+    $( document ).ready(function() {
+    
+       document.getElementById("payment").innerHTML=price;
+
+    });
+    
+
+
 </script>
 </head>
 
 <body>
-    <form>
+  
+   
         <h1>Confirm Purchase</h1>
+      
         <p>Total Amount to Pay:$<span id="payment"></span></p>
+        <form>
         <table>
             <tr>
                 <td>
