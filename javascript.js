@@ -57,14 +57,28 @@ $("#movie").change(function()
  $("#buyseat").click(function() {
 
    var result;
-   var result = confirm("Press a button!");
-   if (result == true) {
-   txt = "You pressed OK!";
-   } else {
-   txt = "You pressed Cancel!";
+   var result = confirm("Press 'ok' to confirm");
+   if (result == true)
+   {
+      $("td").each(function() {
+         if($( this).hasClass( "selected" ))
+            {
+               $( this ).addClass("occupied");
+            }
+     
+         // compare id to what you want
+     });
+      
+      $("#finalpayment").removeAttr("disabled"); 
+   } 
+   
+   else
+   {
+  
+      
    }
 
-   $("#finalpayment").removeAttr("disabled"); 
+   
 
 
     
