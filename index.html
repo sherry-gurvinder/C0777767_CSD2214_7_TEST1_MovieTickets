@@ -11,7 +11,7 @@
     <title>Movie Ticket</title>
 </head>
 <body>
-    <form action="" method="" style="text-align: center;
+    <form action="paymentdetails.html" method="get" style="text-align: center;
     margin-top: 10%;">
 
   <span style="font-size: 24px;">Select Movie from the drop down</span>
@@ -60,7 +60,9 @@
             <p>Movie Selected:</p>
             <p>Ticket Price:$<span id="price">0.00</span></p>
             <p>Number of seats selected:<span id="seats">0</span></p>
-            <p>Total Price:$<span id="totalprice">0.00</span></p>
+            <p>Total Price:$
+            <input type="text" id="finalpayment" value="0.00" name="finalpayment" disabled>
+            </p>
         </td>
     </tr>
     <tr>
