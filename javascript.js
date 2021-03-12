@@ -1,5 +1,6 @@
 $( document ).ready(function() {
   
+   alert("select movie from drop down")
    $('td').addClass('inactiveclick');
 
 var movieseat=0;
@@ -79,7 +80,10 @@ $("#movie").change(function()
          $('td').addClass('inactiveclick');
          $("#finalpayment").removeAttr("disabled"); 
         
-
+      if(flag==1)
+      {
+         $('#buyseatbtn').removeClass('inactiveclick');
+      }
        
       } 
       
@@ -92,6 +96,7 @@ $("#movie").change(function()
    else
    {
       $("#finalpayment").removeAttr("disabled"); 
+      $('td').removeClass('inactiveclick');
       flag = 1;
    }
 
