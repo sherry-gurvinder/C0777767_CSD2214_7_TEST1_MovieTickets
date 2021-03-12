@@ -56,9 +56,17 @@ $("#movie").change(function()
 
  $("#buyseat").click(function() {
 
+   var result;
+   var result = confirm("Press a button!");
+   if (result == true) {
+   txt = "You pressed OK!";
+   } else {
+   txt = "You pressed Cancel!";
+   }
+
    $("#finalpayment").removeAttr("disabled"); 
 
-   
+
     
  })
 
