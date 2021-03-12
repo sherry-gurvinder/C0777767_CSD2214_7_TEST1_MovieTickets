@@ -1,0 +1,2 @@
+https://www.sitepoint.com/get-url-parameters-with-javascript/
+https://www.w3schools.com/
