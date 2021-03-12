@@ -1,5 +1,6 @@
 $( document ).ready(function() {
   
+   $("table").prop("disabled", true);
 
 var movieseat=0;
 var moviename;
