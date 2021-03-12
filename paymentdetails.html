@@ -17,23 +17,37 @@
     
        document.getElementById("payment").innerHTML=price;
 
+       cardname =document.getElementById("cardname").value;
+       cardno = document.getElementById("cardno").value;
+       cvv = document.getElementById("cvv").value;
+       error = document.getElementById("Error-msg");
        $("#Pay").click(function()
        {
 
-        if($("#cardname").val()=="")
+        debugger;
+        if(cardname=="")
        {
-            $("#Error-msg").innerHTML="Must";
+        error.innerHTML="Card Holder Name Required";
             return false;
        }
-       if($("#cardno").val()=="")
+       else{
+        error.innerHTML="";
+       }
+       if(cardno=="")
        {
-            $("#Error-msg").innerHTML="Must";
+        error.innerHTML="Card Number Required";
             return false;
        }
-       if($("#cvv").val()=="")
+       else{
+        error.innerHTML="";
+       }
+       if(cvv=="")
        {
-            $("#Error-msg").innerHTML="Must";
+        error.innerHTML="cvv Required";
             return false;
+       }
+       else{
+        error.innerHTML="";
        }
 
        })
@@ -53,7 +67,7 @@
         <h1>Confirm Purchase</h1>
       
         <p>Total Amount to Pay:$<span id="payment"></span></p>
-        <span id="Error-msg"></span>
+        <span id="Error-msg" style="color: #ff000094;"></span>
         <form>
         <table>
             <tr>
